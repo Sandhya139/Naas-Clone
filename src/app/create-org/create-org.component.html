@@ -2,7 +2,7 @@
     <div class="mx-auto max-w-2xl bg-white p-16 shadow-lg">
       <h1 class="text-2xl font-bold tracking-tight text-[#666666] text-center sm:text-3xl">Sign Up to Naas</h1>
       <p class="mt-4 text-muted-foreground text-center text-base">Enter basic details to get started with NaaS</p>
-      <form class="mt-8 space-y-4">
+      <form class="mt-8 space-y-4" [formGroup]="formData" (submit)="formSubmit()">
         <div class="space-y-2">
           <label
             class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -14,6 +14,7 @@
             class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
             id="first-name"
             placeholder="Enter your first name"
+            formControlName="firstName"
           />
         </div>
         <div class="space-y-2">
@@ -27,6 +28,7 @@
             class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
             id="last-name"
             placeholder="Enter your last name"
+            formControlName="lastName"
           />
         </div>
         <div class="space-y-2">
@@ -40,6 +42,7 @@
             class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
             id="company-name"
             placeholder="Enter your company name"
+            formControlName="companyName"
           />
         </div>
         <button
