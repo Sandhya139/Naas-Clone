@@ -9,5 +9,8 @@ export const routes: Routes = [
     },
     {
         path: 'header', loadComponent: () => import('./header/header.component').then(m => m.HeaderComponent),
+    },
+    {
+        path: 'dashboard', loadComponent: () => import('./dashboard/dashboard.component').then(m => m.DashboardComponent)
     }
 ];

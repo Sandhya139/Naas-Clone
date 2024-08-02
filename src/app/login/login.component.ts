@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       const payload = this.decodeToken(response.credential);
       sessionStorage.setItem("loggedInUser", JSON.stringify(payload));
       if(sessionStorage.getItem("orgDetails")) {
-      this.router.navigate(['header']);
+      this.router.navigate(['dashboard']);
       }
       else {
         this.router.navigate(['createOrg']);

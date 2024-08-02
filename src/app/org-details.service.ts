@@ -13,6 +13,6 @@ export class OrgDetailsService {
     console.log("Org created");
     console.log(firstName, lastName, companyName);
     sessionStorage.setItem("orgDetails", JSON.stringify({firstName, lastName, companyName}));
-    this.router.navigate(['header']);
+    this.router.navigate(['dashboard']);
   }
 }
